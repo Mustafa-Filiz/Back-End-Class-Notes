@@ -118,9 +118,9 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-lesson2env/
 .env
 .venv
+lesson3env/
 env/
 venv/
 ENV/
@@ -152,9 +152,3 @@ dmypy.json
 cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/django
-
-İngilizce
-*.sage.py
-TÜRKÇE
-*.sage.py
-UZANTI SEÇENEKLERIDAHA FAZLA »
