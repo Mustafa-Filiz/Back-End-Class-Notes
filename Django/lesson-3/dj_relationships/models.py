@@ -16,3 +16,17 @@ class Language(models.Model):
     def __str__(self):
         return self.name
 	
+class Framework(models.Model):
+    name = models.CharField(max_length=30)
+    language = models.ForeignKey(Language, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.name
+	
+class Programmer(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    framework = models.ManyToManyField(Framework)
+    
+    def __str__(self):
+        return self.first_name
