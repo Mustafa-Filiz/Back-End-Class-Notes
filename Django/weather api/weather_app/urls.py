@@ -1,6 +1,7 @@
-from django.urls import path, include
+from django.urls import path
+from .views import index, delete_city
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include(weather_app.urls)),
+    path('', index, name="home"),
+    path('delete/<id>', delete_city, name="delete"),
 ]
