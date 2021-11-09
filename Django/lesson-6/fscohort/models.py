@@ -17,4 +17,7 @@ class Student(models.Model):
     gender = models.CharField(max_length=50, choices=GENDER)
     image = models.ImageField(upload_to="student/", default="default.png")
     
+    def __str__(self):
+        return (f"{self.first_name} {self.last_name}")
+    
     
