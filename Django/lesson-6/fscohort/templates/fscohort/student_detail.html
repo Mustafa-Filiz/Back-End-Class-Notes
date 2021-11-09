@@ -1,0 +1,34 @@
+{% extends 'fscohort/base.html' %}
+
+
+{% block content %}
+
+<h3>Student Detail</h3>
+<div>
+	<img src="{{student.image.url}}" alt="">
+</div>
+<div>
+	{{student.first_name}}
+</div>
+<div>
+	{{student.last_name}}
+</div>
+<div>
+	{{student.number}}
+</div>
+<div>
+	{{student.phone}}
+</div>
+<div>
+	{{student.email}}
+</div>
+<div>
+	{{student.gender}}
+</div>
+
+<div>
+	<a href="{% url 'update' student.id %}">Edit Student</a>
+	<a href="{% url 'delete' student.id %}">Delete</a>
+</div>
+
+{% endblock content %}
